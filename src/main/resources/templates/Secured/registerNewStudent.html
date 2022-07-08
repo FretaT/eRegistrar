@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link th:href="@{./styles/cssandjs/styles.css}" rel="stylesheet" />
+</head>
+<body>
+<header th:replace="fragments/header :: header" ></header>
+<main>
+    <h1>Hello Fall! Register</h1>
+    <div>
+        <form action="/NewStudent">
+            <label>Student Number :</label>
+            <input type="text" id="studentNumber" name="studentNumber" placeholder="Your Student Number..">
+            <label>First Name :</label>
+            <input type="text" id="FirstName" name="FirstName" placeholder="Your First Name..">
+            <label>Middle Name :</label>
+            <input type="text" id="MiddleName" name="MiddleName" placeholder="Your Middle Name..">
+            <label>Last Name:</label>
+            <input type="text" id="LastName" name="LastName" placeholder="Your Last Name..">
+            <label>CGPA :</label>
+            <input type="text" id="cgpa" name="cgpa" placeholder="Your cgpa..">
+            <label>Enrollment Date :</label>
+            <input type="DATE" id="enrollmentDate" name="enrollmentDate" >
+            <label>isInternational : </label>
+            <select id="isInternational" name="isInternational">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</main>
+</body>
+</html>

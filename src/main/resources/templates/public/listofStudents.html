@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+This is student
+<table  id="student">
+    <tr>
+        <th>ID</th>
+        <th>Student Number</th>
+        <th>First Name</th>
+        <th>Middle Name</th>
+        <th>Last Name</th>
+        <th>CGPA</th>
+        <th>Enrolment Date</th>
+        <th>is International</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr th:each="student :${students}">
+        <td th:text="${student.studentNumber}"></td>
+        <td th:text="${student.FirstName}"></td>
+        <td th:text="${student.MiddleName}"></td>
+        <td th:text="${student.LastName}"></td>
+        <td th:text="${student.cgpa}"></td>
+        <td th:text="${student.enrollmentDate}"></td>
+        <td th:text="${student.isInternational}"></td>
+        <td><a th:href="@{'/Secured/edit/{}'}"></a> Edit</td>
+        <td>Delete</td>
+    </tr>
+</table>
+</body>
+</html>
